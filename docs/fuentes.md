@@ -8,6 +8,11 @@ Consulta: **8 de noviembre de 2026**. Este registro distingue material docente, 
 ## Referencia técnica consultada
 - **Dynamax, módulo de inferencia HMM**, documentación y código oficiales: <https://probml.github.io/dynamax/_modules/dynamax/hidden_markov_model/inference.html>. Se consultó para distinguir filtrado, suavizado y representación de probabilidades logarítmicas. No se incorporó su código al proyecto ni se decidió instalar Dynamax. Es documentación técnica, sin año editorial verificado aquí; no se contabiliza como artículo reciente.
 
+## Documentación de la implementación
+
+- NumPy, **Parallel random number generation**, sección `SeedSequence` spawning: <https://numpy.org/doc/stable/reference/random/parallel.html>. Consultada el 8 de noviembre de 2026 para la generación reproducible de flujos hijos. La independencia de esos flujos es una propiedad probabilística del procedimiento, no una garantía deducida de que dos secuencias concretas difieran. La página estable puede describir una versión posterior; la ejecución local se verificó con NumPy 2.4.3. No cuenta como artículo reciente.
+- SciPy, **scipy.stats.t**: <https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.t.html>. Consultada para el cuantil t previsto en los intervalos; todavía no se incorporó SciPy a la implementación. No cuenta como artículo reciente.
+
 ## Artículos candidatos: metadatos y resúmenes verificados
 Se abrieron las páginas editoriales originales y se revisaron sus metadatos y resúmenes. **No se ha realizado una lectura completa de los artículos**. Sus resultados no justifican los valores numéricos de nuestro servidor.
 

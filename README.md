@@ -7,43 +7,47 @@ En esta actividad estudiaré un servidor que puede encontrarse en dos estados in
 
 Trabajaré con datos simulados y parámetros hipotéticos. Una respuesta lenta no demuestra por sí sola que un servidor real esté saturado; este proyecto es un ejercicio académico para estudiar esa incertidumbre.
 
-## Estado del proyecto
-Segundo avance: diseño del modelo y configuración de los tres escenarios, con un registro inicial de fuentes. Todavía no hay código de simulación ni resultados experimentales; la revisión bibliográfica continúa pendiente de completar.
+La implementación genera estados y respuestas, reconstruye los estados con Viterbi y compara sus métricas con una regla sin memoria. Incluye tres escenarios: base, saturación persistente y observaciones ambiguas.
 
-## Preguntas del estudio
-1. ¿Cómo representar la condición del servidor y sus respuestas mediante un HMM?
-2. ¿Cómo cambia la recuperación de los estados al modificar las transiciones o la capacidad informativa de las observaciones?
-3. ¿Qué tan reproducibles y variables son los resultados entre repeticiones con semillas registradas?
+El [planteamiento](docs/planteamiento.md) describe los objetivos y el alcance. El [modelo](docs/modelo.md) define las matrices y el protocolo de evaluación. Las referencias se registran en [fuentes](docs/fuentes.md).
 
-El detalle está en [docs/planteamiento.md](docs/planteamiento.md). El [diseño del modelo](docs/modelo.md) define las matrices y el protocolo de evaluación; el [registro de fuentes](docs/fuentes.md) distingue lo verificado de lo pendiente.
-
-## Organización actual
+## Organización
 ```text
 EA2_/
 ├── .gitattributes
 ├── .gitignore
 ├── README.md
+├── requirements.txt
+├── simulacion.py
+├── tests/
+│   └── test_simulacion.py
 ├── config/
 │   └── escenarios.json
 └── docs/
     ├── planteamiento.md
     ├── modelo.md
-    └── fuentes.md
+    ├── fuentes.md
+    └── validacion.md
 ```
 
-## Ruta de trabajo
-1. Definir el problema, objetivos y alcance.
-2. Documentar el modelo, las fuentes verificadas y tres escenarios comparables.
-3. Implementar la simulación y la inferencia con Viterbi; comprobar su funcionamiento.
-4. Ejecutar experimentos, guardar evidencias y analizar resultados.
-5. Completar la documentación, el artículo y el video de la actividad.
+## Cómo ejecutar
+Abre una terminal en la carpeta del repositorio. Se comprobó con Python 3.14.3 y NumPy 2.4.3. Para instalar las dependencias en un entorno propio:
 
-Las instrucciones de ejecución y las dependencias se añadirán cuando exista una implementación comprobada.
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+```
 
-## Evidencias y entregables
-El repositorio reunirá código, parámetros, dependencias, documentación técnica y evidencias de resultados. El artículo y el video se prepararán por separado. No se incluirán copias completas del material docente ni archivos temporales.
+Ejecuta las pruebas y un ejemplo:
 
-Cada avance corresponderá a un cambio real y revisado. Los commits y push los realizará el autor.
+```powershell
+.\.venv\Scripts\python.exe -m unittest discover -s tests -v
+.\.venv\Scripts\python.exe simulacion.py --escenario base
+```
+
+También puedes seleccionar `saturacion_persistente` u `observaciones_ambiguas`. Si tu entorno ya tiene las dependencias, puedes usar `python` directamente. El ejemplo lee la configuración, usa su semilla ilustrativa y muestra las métricas de ambos métodos. No genera archivos ni representa el experimento completo.
+
+Las comprobaciones y sus límites se describen en [docs/validacion.md](docs/validacion.md).
 
 ## Material de partida
-El caso se adapta del laboratorio docente **Investiga con IA. Decide con criterio**, disponible en el material complementario de EA2. La consigna de referencia es **S25 - Módulo 2. Actividad didáctica 2**. Las fuentes académicas se documentarán después de verificar su contenido y pertinencia; este avance no presenta una revisión bibliográfica ya terminada.
+El caso y los parámetros base se adaptan del laboratorio docente **Investiga con IA. Decide con criterio**, incluido en el material complementario de EA2 del curso de Simulación.
