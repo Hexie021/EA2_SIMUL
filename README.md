@@ -8,30 +8,30 @@ En esta actividad estudiaré un servidor que puede encontrarse en dos estados in
 Trabajaré con datos simulados y parámetros hipotéticos. Una respuesta lenta no demuestra por sí sola que un servidor real esté saturado; este proyecto es un ejercicio académico para estudiar esa incertidumbre.
 
 ## Estado del proyecto
-
-Primer avance: planteamiento del problema y organización del repositorio. Todavía no hay código de simulación ni resultados experimentales.
+Segundo avance: diseño del modelo y configuración de los tres escenarios, con un registro inicial de fuentes. Todavía no hay código de simulación ni resultados experimentales; la revisión bibliográfica continúa pendiente de completar.
 
 ## Preguntas del estudio
-
 1. ¿Cómo representar la condición del servidor y sus respuestas mediante un HMM?
 2. ¿Cómo cambia la recuperación de los estados al modificar las transiciones o la capacidad informativa de las observaciones?
 3. ¿Qué tan reproducibles y variables son los resultados entre repeticiones con semillas registradas?
 
-El detalle está en [docs/planteamiento.md](docs/planteamiento.md).
+El detalle está en [docs/planteamiento.md](docs/planteamiento.md). El [diseño del modelo](docs/modelo.md) define las matrices y el protocolo de evaluación; el [registro de fuentes](docs/fuentes.md) distingue lo verificado de lo pendiente.
 
 ## Organización actual
-
 ```text
 EA2_/
 ├── .gitattributes
 ├── .gitignore
 ├── README.md
+├── config/
+│   └── escenarios.json
 └── docs/
-    └── planteamiento.md
+    ├── planteamiento.md
+    ├── modelo.md
+    └── fuentes.md
 ```
 
 ## Ruta de trabajo
-
 1. Definir el problema, objetivos y alcance.
 2. Documentar el modelo, las fuentes verificadas y tres escenarios comparables.
 3. Implementar la simulación y la inferencia con Viterbi; comprobar su funcionamiento.
@@ -41,11 +41,9 @@ EA2_/
 Las instrucciones de ejecución y las dependencias se añadirán cuando exista una implementación comprobada.
 
 ## Evidencias y entregables
-
 El repositorio reunirá código, parámetros, dependencias, documentación técnica y evidencias de resultados. El artículo y el video se prepararán por separado. No se incluirán copias completas del material docente ni archivos temporales.
 
 Cada avance corresponderá a un cambio real y revisado. Los commits y push los realizará el autor.
 
 ## Material de partida
-
 El caso se adapta del laboratorio docente **Investiga con IA. Decide con criterio**, disponible en el material complementario de EA2. La consigna de referencia es **S25 - Módulo 2. Actividad didáctica 2**. Las fuentes académicas se documentarán después de verificar su contenido y pertinencia; este avance no presenta una revisión bibliográfica ya terminada.

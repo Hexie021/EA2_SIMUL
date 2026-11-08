@@ -1,0 +1,32 @@
+{
+  "estados": ["normal", "saturado"],
+  "observaciones": ["rapida", "lenta"],
+  "experimento": {
+    "longitud_secuencia": 1000,
+    "replicas": 200,
+    "semilla_maestra": 20261108,
+    "nivel_confianza": 0.95,
+    "metodo_intervalo": "t_student_entre_replicas",
+    "semilla_ejemplo": 42
+  },
+  "escenarios": [
+    {
+      "id": "base",
+      "pi": [0.8, 0.2],
+      "A": [[0.9, 0.1], [0.3, 0.7]],
+      "B": [[0.85, 0.15], [0.2, 0.8]]
+    },
+    {
+      "id": "saturacion_persistente",
+      "pi": [0.8, 0.2],
+      "A": [[0.9, 0.1], [0.1, 0.9]],
+      "B": [[0.85, 0.15], [0.2, 0.8]]
+    },
+    {
+      "id": "observaciones_ambiguas",
+      "pi": [0.8, 0.2],
+      "A": [[0.9, 0.1], [0.3, 0.7]],
+      "B": [[0.6, 0.4], [0.4, 0.6]]
+    }
+  ]
+}
