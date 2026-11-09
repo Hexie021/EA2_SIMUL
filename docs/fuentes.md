@@ -11,7 +11,8 @@ Consulta: **8 de noviembre de 2026**. Este registro distingue material docente, 
 ## Documentación de la implementación
 
 - NumPy, **Parallel random number generation**, sección `SeedSequence` spawning: <https://numpy.org/doc/stable/reference/random/parallel.html>. Consultada el 8 de noviembre de 2026 para la generación reproducible de flujos hijos. La independencia de esos flujos es una propiedad probabilística del procedimiento, no una garantía deducida de que dos secuencias concretas difieran. La página estable puede describir una versión posterior; la ejecución local se verificó con NumPy 2.4.3. No cuenta como artículo reciente.
-- SciPy, **scipy.stats.t**: <https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.t.html>. Consultada para el cuantil t previsto en los intervalos; todavía no se incorporó SciPy a la implementación. No cuenta como artículo reciente.
+- SciPy, **scipy.stats.t**: <https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.t.html>. Consultada para el cuantil t de los intervalos e incorporada mediante SciPy 1.17.1. No cuenta como artículo reciente.
+- Matplotlib, **Axes.errorbar**: <https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.errorbar.html>. Documentación oficial consultada para representar medias e intervalos. Las figuras se verificaron con Matplotlib 3.10.8. No cuenta como artículo reciente.
 
 ## Artículos candidatos: metadatos y resúmenes verificados
 Se abrieron las páginas editoriales originales y se revisaron sus metadatos y resúmenes. **No se ha realizado una lectura completa de los artículos**. Sus resultados no justifican los valores numéricos de nuestro servidor.

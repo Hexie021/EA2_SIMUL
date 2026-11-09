@@ -93,4 +93,4 @@ Se guardarán las métricas por réplica y su resumen en CSV, configuración uti
 
 Antes de experimentar se comprobarán: dimensiones y sumas de probabilidades; alineación de estados y observaciones; Viterbi contra enumeración exhaustiva en secuencias pequeñas; casos de emisiones deterministas; métricas con ejemplos calculables a mano; repetibilidad con idéntica configuración y diversidad de los flujos hijos.
 
-**Estado!** diseño documentado, pendiente de implementación y ejecución. Los valores teóricos anteriores no sustituyen resultados simulados.
+**Estado:** diseño implementado y ejecutado. Las evidencias están en `resultados/` y su interpretación en [resultados.md](resultados.md). Los valores teóricos anteriores se distinguen de las estimaciones simuladas.

@@ -1,0 +1,15 @@
+{
+  "python": "3.14.3",
+  "plataforma": "Windows-11-10.0.26200-SP0",
+  "numpy": "2.4.3",
+  "scipy": "1.17.1",
+  "matplotlib": "3.10.8",
+  "generador": "PCG64",
+  "orden_flujos": "escenario, réplica",
+  "sha256": {
+    "simulacion.py": "034fc412e7d9284d6a0f49d1cf2e9adeb2b911252d0cf19c3026b4f25465a4a3",
+    "experimentos.py": "0bffad4fc7eeed8f3eafc0d8c67d702cbabcc714d74757578aa6afbbcd31cadd",
+    "requirements.txt": "79b6bd266d6143878f60dc6cd5b4759b59f912527388d81ec77cef6b874096a9",
+    "config/escenarios.json": "e12b7ea1e16bf79eb4a52b98888b067fea3c257c886e566bebf15a950215cb60"
+  }
+}

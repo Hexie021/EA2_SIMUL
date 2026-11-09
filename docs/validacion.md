@@ -29,4 +29,12 @@ Cada ejemplo utiliza T=1000 y semilla 42. Esa semilla está reservada a la ilust
 
 En el ejemplo ambiguo, Viterbi clasificó todos los instantes como normales. Esto permite observar una limitación relevante: una exactitud global relativamente elevada puede coexistir con sensibilidad de saturación nula. Es una observación de una sola secuencia, no una conclusión general sobre el desempeño.
 
-No se han ejecutado todavía las 600 réplicas del diseño, calculado sus intervalos de confianza ni generado las tablas y figuras finales. El siguiente avance implementará ese protocolo y guardará evidencias reproducibles. Tampoco se ha entrenado el modelo ni validado su uso con datos de un servidor real.
+## Validación del experimento completo
+
+Se incorporó `tests/test_experimentos.py`. La suite completa tiene **12 pruebas correctas**: las nueve iniciales y tres adicionales que comprueban el intervalo t con un caso calculable a mano, el manejo de valores ausentes y muestras insuficientes, y la integración de réplicas, semillas y diferencias emparejadas.
+
+Se ejecutó `python experimentos.py` con SciPy 1.17.1 y Matplotlib 3.10.8, además del entorno indicado arriba: 600 secuencias de 1000 instantes, evaluadas con dos métodos, para 1200 filas de métricas. Las dos figuras se inspeccionaron visualmente.
+
+La tabla, CSV y análisis están enlazados desde el README. No se ha entrenado el modelo ni validado su uso con datos de un servidor real.
+
+Se repitieron las 600 simulaciones con la misma configuración y se compararon byte a byte los CSV de métricas, resumen y diferencias: los tres coincidieron. También se comprobaron 600 claves hijas distintas, suma 1000 en cada matriz de confusión y 200 valores válidos en cada uno de los 30 resúmenes. Esta comprobación de reproducción corresponde al entorno y versiones registrados.
